@@ -1,219 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creative Minds Academy</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <title>Creative Minds Academy | CBC Co-Curricular Programs & Talent Development in Kenya</title>
+<style>
+:root {
+    --primary-color: #003366;
+    --secondary-color: #FFD700;
+    --accent-color: #2AC1BC;
+    --text-color: #333;
+    --light-bg: #f9f9f9;
+}
 
-  <meta name="description" content="Creative Minds Academy provides CBC-aligned co-curricular programs including chess, music, dance, ballet, taekwondo, skating and swimming for schools across Kenya.">
+/* GLOBAL */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin:0;
+    color:var(--text-color);
+    background:var(--light-bg);
+}
+a { text-decoration:none; color: inherit; }
 
-  <meta name="robots" content="index, follow">
+header, footer {
+    background:white;
+    padding:1em 2em;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
 
-  <link rel="canonical" href="https://creativeminds386-png.github.io/CreativeMindsAcademy/">
+header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
 
-  <!-- Google Search Console verification -->
-  <meta name="google-site-verification" content="Piyn03QmOt5JwXKXSkcNUieWKptNiIKqcn6OlQnqDjw">
+header nav ul {
+    display:flex;
+    gap:1.5em;
+    list-style:none;
+}
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+header nav ul li a {
+    color: var(--primary-color);
+    font-weight:600;
+    transition:0.3s;
+}
 
-  <style>
-    :root {
-        --primary-color: #003366;
-        --secondary-color: #FFD700;
-        --accent-color: #2AC1BC;
-        --text-color: #333;
-        --light-bg: #f9f9f9;
-    }
+header nav ul li a:hover {
+    color: var(--secondary-color);
+}
 
-    body {
-        font-family: 'Montserrat', sans-serif;
-        margin: 0;
-        color: var(--text-color);
-        background: var(--light-bg);
-    }
+/* HERO SECTION */
+.hero {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background: linear-gradient(135deg, #003366 30%, #FFD700 70%);
+    color:white;
+    padding:6em 1em;
+}
 
-    a { text-decoration: none; color: inherit; }
+.hero img {
+    max-width:200px;
+    margin-bottom:1em;
+}
 
-    header, footer {
-        background: white;
-        padding: 1em 2em;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
+.hero h1 {
+    font-size:2.5em;
+    margin-bottom:0.5em;
+}
 
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-    }
+.hero p {
+    font-size:1.2em;
+    margin-bottom:1.5em;
+}
 
-    header nav ul {
-        display: flex;
-        gap: 1.5em;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
+.hero a.cta-btn {
+    background:white;
+    color:var(--primary-color);
+    padding:0.8em 2em;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
+}
 
-    header nav ul li a {
-        color: var(--primary-color);
-        font-weight: 600;
-        transition: 0.3s;
-    }
+.hero a.cta-btn:hover {
+    background:var(--secondary-color);
+    color:white;
+    transform:scale(1.05);
+}
 
-    header nav ul li a:hover {
-        color: var(--secondary-color);
-    }
+/* ABOUT SNAPSHOT */
+.about-snapshot {
+    max-width:900px;
+    margin:3em auto;
+    text-align:center;
+    padding:0 1em;
+}
 
-    .hero {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background: linear-gradient(135deg, #003366 30%, #FFD700 70%);
-        color: white;
-        padding: 6em 1em;
-    }
+.about-snapshot h2 {
+    color:var(--primary-color);
+    margin-bottom:0.5em;
+}
 
-    .hero img {
-        max-width: 200px;
-        margin-bottom: 1em;
-    }
+.about-snapshot p {
+    font-size:1.1em;
+    margin-bottom:1em;
+}
 
-    .hero h1 {
-        font-size: 2.5em;
-        margin-bottom: 0.5em;
-    }
+.about-snapshot a {
+    color:var(--secondary-color);
+    font-weight:bold;
+}
 
-    .hero p {
-        font-size: 1.2em;
-        margin-bottom: 1.5em;
-    }
+/* PROGRAMS */
+.programs {
+    max-width:1000px;
+    margin:4em auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:2em;
+    padding:0 1em;
+}
 
-    .hero a.cta-btn {
-        background: white;
-        color: var(--primary-color);
-        padding: 0.8em 2em;
-        border-radius: 8px;
-        font-weight: bold;
-        transition: 0.3s;
-    }
+.program-card {
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 6px 15px rgba(0,0,0,0.1);
+    text-align:center;
+    transition:0.3s;
+}
 
-    .hero a.cta-btn:hover {
-        background: var(--secondary-color);
-        color: white;
-        transform: scale(1.05);
-    }
+.program-card img {
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
 
-    .about-snapshot {
-        max-width: 900px;
-        margin: 3em auto;
-        text-align: center;
-        padding: 0 1em;
-    }
+.program-card h3 {
+    margin:1em 0 0.5em;
+}
 
-    .about-snapshot h2 {
-        color: var(--primary-color);
-        margin-bottom: 0.5em;
-    }
+.program-card p {
+    padding:0 1em 1em;
+}
 
-    .about-snapshot p {
-        font-size: 1.1em;
-        margin-bottom: 1em;
-    }
+.program-card:hover {
+    transform:scale(1.03);
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
 
-    .programs {
-        max-width: 1000px;
-        margin: 4em auto;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2em;
-        padding: 0 1em;
-    }
+.program-card a {
+    display:block;
+    margin-bottom:1em;
+    font-weight:bold;
+    color:var(--primary-color);
+}
 
-    .program-card {
-        background: white;
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-        text-align: center;
-        transition: 0.3s;
-    }
+.program-card a:hover {
+    color:var(--secondary-color);
+}
 
-    .program-card img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-    }
+/* WHY US */
+.why-us {
+    max-width:900px;
+    margin:4em auto;
+    text-align:center;
+    padding:0 1em;
+}
 
-    .program-card:hover {
-        transform: scale(1.03);
-    }
+.why-us h2 {
+    color:var(--primary-color);
+    margin-bottom:1em;
+}
 
-    .why-us {
-        max-width: 900px;
-        margin: 4em auto;
-        text-align: center;
-        padding: 0 1em;
-    }
+.why-us p {
+    font-size:1.1em;
+}
 
-    footer {
-        background: var(--primary-color);
-        color: var(--secondary-color);
-        text-align: center;
-        padding: 3em 2em;
-    }
-  </style>
+/* FOOTER */
+footer {
+    background:var(--primary-color);
+    color:var(--secondary-color);
+    text-align:center;
+    padding:3em 2em;
+}
+
+footer h3 { margin-bottom:1em; }
+footer p { font-size:0.95em; margin-bottom:1em; }
+footer a { color:var(--secondary-color); text-decoration:underline; }
+</style>
 </head>
 
 <body>
 
 <header>
-  <img src="images/CreativeMindsLogo.png.jpg" alt="Creative Minds Academy Logo" style="height:60px;">
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="programs.html">Programs</a></li>
-      <li><a href="why-us.html">Why Us</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+    <img src="images/CreativeMindsLogo.png.jpg"
+         alt="Creative Minds Academy Logo"
+         style="height:60px;">
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="why-us.html">Why Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 </header>
 
 <section class="hero">
-  <img src="images/CreativeMindsLogo.png.jpg" alt="Creative Minds Academy Logo">
-  <h1>Serious Fun, Deeper Growth</h1>
-  <p>CBC-aligned specialist programs delivered directly within schools across Kenya.</p>
-  <a href="programs.html" class="cta-btn">Explore Programs</a>
+    <img src="images/CreativeMindsLogo.png.jpg"
+         alt="Creative Minds Academy Logo">
+    <h1>Serious Fun, Deeper Growth</h1>
+    <p>CBC-aligned specialist programs delivered directly within schools across Kenya.</p>
+    <a href="programs.html" class="cta-btn">Explore Programs</a>
 </section>
 
 <section class="about-snapshot">
-  <h2>About Us</h2>
-  <p>
-    Creative Minds Academy is a CBC-aligned specialist provider offering professional
-    creative and talent-based programs to schools across Kenya.
-  </p>
-  <a href="about.html">Read More</a>
+    <h2>About Us</h2>
+    <p>
+        Creative Minds Academy is a CBC-aligned specialist provider offering professional
+        creative and talent-based programs to schools across Kenya.
+    </p>
+    <a href="about.html">Read More</a>
+</section>
+
+<section class="programs">
+    <div class="program-card">
+        <img src="images/chess.jpg" alt="Chess Education">
+        <h3>Chess Education</h3>
+        <p>Strengthens problem-solving, critical thinking, patience, and strategic planning.</p>
+        <a href="programs.html#chess">Learn More</a>
+    </div>
+
+    <div class="program-card">
+        <img src="images/music.jpg" alt="Music Education">
+        <h3>Music Education</h3>
+        <p>Enhances creativity, memory, focus, and emotional expression.</p>
+        <a href="programs.html#music">Learn More</a>
+    </div>
+
+    <div class="program-card">
+        <img src="images/dance.jpg" alt="Dance & Ballet">
+        <h3>Dance & Ballet</h3>
+        <p>Promotes coordination, flexibility, confidence, and artistic expression.</p>
+        <a href="programs.html#dance">Learn More</a>
+    </div>
+
+    <div class="program-card">
+        <img src="images/taekwondo.jpg" alt="Taekwondo">
+        <h3>Taekwondo</h3>
+        <p>Builds discipline, focus, respect, and physical fitness.</p>
+        <a href="programs.html#taekwondo">Learn More</a>
+    </div>
+
+    <div class="program-card">
+        <img src="images/skating.jpg" alt="Skating">
+        <h3>Skating</h3>
+        <p>Develops balance, coordination, confidence, and social interaction.</p>
+        <a href="programs.html#skating">Learn More</a>
+    </div>
+
+    <div class="program-card">
+        <img src="images/swimming.jpg" alt="Swimming">
+        <h3>Swimming</h3>
+        <p>Enhances endurance, water safety, confidence, and coordination.</p>
+        <a href="programs.html#swimming">Learn More</a>
+    </div>
 </section>
 
 <section class="why-us">
-  <h2>Why Choose Us</h2>
-  <p>
-    Flexible scheduling, professional instructors, CBC-aligned programs,
-    and zero administrative burden for schools.
-  </p>
+    <h2>Why Choose Us</h2>
+    <p>
+        Flexible scheduling, professional instructors, CBC-aligned programs,
+        and zero administrative burden for schools.
+        <a href="why-us.html">Learn More</a>
+    </p>
 </section>
 
 <footer>
-  <h3>Creative Minds Academy</h3>
-  <p>&copy; Creative Minds Academy. All rights reserved.</p>
+    <h3>Creative Minds Academy</h3>
+    <p>&copy; Creative Minds Academy. All rights reserved.</p>
 </footer>
 
 </body>
